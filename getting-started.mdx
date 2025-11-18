@@ -1,0 +1,107 @@
+---
+title: Getting Started
+description: Initial setup and basic usage of aishwarya Documentation
+---
+
+## Account Setup
+
+You begin your journey with aishwarya by creating an account. This process takes less than a minute and unlocks all features. Verify your email to activate collaboration tools immediately.
+
+<Callout kind="tip">
+  Choose a strong password to secure your documentation space.
+</Callout>
+
+## Creating Your First Project
+
+Set up a new project to house your documentation. Projects act as containers for pages, folders, and integrations.
+
+<Steps>
+  <Step title="Log In" icon="log-in">
+    Enter your credentials on the login page. If new, complete registration first. 
+  </Step>
+  <Step title="New Project" icon="plus">
+    
+    ```javascript
+    // Simulated API call for project creation
+    const projectData = {
+      name: 'My Docs',
+      description: 'Project overview'
+    };
+    fetch('/api/projects', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(projectData)
+    });
+    ```
+  </Step>
+  <Step title="Configure Settings" icon="settings">
+    Set permissions, themes, and integrations in the project dashboard.
+  </Step>
+</Steps>
+
+## Building Content
+
+Add pages and organize them logically. Use the editor for markdown and embed components.
+
+<Tabs>
+  <Tab title="Basic Page" icon="file-text">
+    Start with a simple markdown page.
+    
+    ```markdown
+    # My Page
+    
+    Content here.
+    ```
+  </Tab>
+  <Tab title="Advanced Page" icon="code">
+    Include code blocks and diagrams.
+    
+    ```javascript
+    function createDoc() {
+      return { title: 'Advanced', content: 'Detailed info' };
+    }
+    ```
+  </Tab>
+</Tabs>
+
+<Columns cols={2}>
+  <Card title="Folders" icon="folder" href="#">
+    Group related pages for better navigation.
+  </Card>
+  <Card title="Search" icon="search" href="#">
+    Find content quickly across your project.
+  </Card>
+</Columns>
+
+## Integration Basics
+
+Connect aishwarya with external tools.
+
+<CodeGroup tabs="GitHub,Slack">
+  ```javascript
+  // GitHub webhook setup
+  const webhook = {
+    url: 'https://aishwarya.com/webhook/github',
+    events: ['push']
+  };
+  ```
+  ```javascript
+  // Slack notification
+  fetch('/api/slack', {
+    method: 'POST',
+    body: JSON.stringify({ channel: '#docs', message: 'Update ready' })
+  });
+  ```
+</CodeGroup>
+
+## Troubleshooting Common Issues
+
+<Expandable title="Sync Problems" default-open="false">
+  Check your internet connection and API keys. Restart the sync process if needed.
+</Expandable>
+
+<Expandable title="Permission Errors">
+  Verify user roles in project settings. Admins can adjust access levels.
+</Expandable>
+
+You now have the foundation to build robust documentation. Explore advanced features for more capabilities.
